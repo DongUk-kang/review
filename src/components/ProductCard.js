@@ -21,9 +21,12 @@ const ProductCard = ({product}) => {
                         {product.rating}
                     </strong>
                 </Card.Text>
-                <Card.Text as={"h3"}>
-                    $ {product.price}
-                </Card.Text>
+                <Link to={`/product/${product._id}`}>
+                    <Card.Text as={"h3"}>
+                        $ {product.price}
+                    </Card.Text>
+                </Link>
+
             </Card.Body>
         </Card>
     );
